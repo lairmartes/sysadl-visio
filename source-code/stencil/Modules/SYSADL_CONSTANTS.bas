@@ -1,0 +1,167 @@
+Attribute VB_Name = "SYSADL_CONSTANTS"
+Option Explicit
+    Public Const sysAdlTypeSetSystem = "System"
+    Public Const sysAdlTypeSetSender = "Sender"
+    Public Const sysAdlTypeSetReceiver = "Receiver"
+    Public Const sysAdlTypeSetNode = "Node"
+    Public Const sysAdlTypeSetObjective = "Objective"
+    Public Const sysAdlTypeSetQuality = "Quality"
+    Public Const sysAdlTypeSetStakeholder = "Stakeholder"
+    Public Const sysAdlTypeSetFormat = "Format"
+    Public Const sysAdlTypeSetChannel = "Channel"
+    Public Const sysAdlTypeSetConnector = "Connector"
+    Public Const sysAdlTypeSetIsA = "IsA"
+    Public Const sysAdlTypeSetRepresents = "Represents"
+    Public Const sysAdlTypeSetDependsOn = "DependsOn"
+    Public Const sysAdlTypeSetComposedBy = "ComposedBy"
+    Public Const sysAdlTypeSetTransition = "Transition"
+    Public Const sysAdlTypeSetLayer = "Layer"
+    Public Const sysAdlTypeSetRole = "Role"
+    Public Const sysAdlTypeSetDecision = "Decision"
+    Public Const sysAdlTypeSetAssumption = "Assumption"
+    
+    Public Const sysAdlStructureInterface = "Interface"
+    Public Const sysAdlStructureProtocol = "Protocol"
+    Public Const sysAdlStructureHost = "Host"
+    Public Const sysAdlStructureDeposit = "Deposit"
+    Public Const sysAdlStructurePort = "Port"
+    Public Const sysAdlStructureDevice = "Device"
+    Public Const sysAdlStructureConcern = "Concern"
+    Public Const sysAdlStructureRequirement = "Requirement"
+    Public Const sysAdlStructureResponsibility = "Responsibility"
+    Public Const sysAdlStructureRationale = "Rationale"
+    Public Const sysAdlStructureDefinition = "Definition"
+    Public Const sysAdlStructureSingleElement = "SingleElement"
+    
+    Public Const sysAdlCommunicationConversation = "Conversation"
+    Public Const sysAdlCommunicationNet = "Net"
+    Public Const sysAdlCommunicationInstallation = "Installation"
+    
+    Public Const sysAdlKeyCustPropLabelStereotype = "Stereotype"
+    Public Const sysAdlKeyCustPropLabelNamespace = "Namespace"
+    Public Const sysAdlKeyCustPropLabelId = "Id"
+    Public Const sysAdlKeyCustPropLabelURLInfo = "URL Info"
+    
+    Public Const sysAdlKeyCustPropRowNameStereotype = sysAdlKeyCustPropLabelStereotype
+    Public Const sysAdlKeyCustPropRowNameNamespace = sysAdlKeyCustPropLabelNamespace
+    Public Const sysAdlKeyCustPropRowNameId = sysAdlKeyCustPropLabelId
+    Public Const sysAdlKeyCustPropRowNameURLInfo = "URLInfo"
+    
+    Public Const sysAdlStringConstantsEmpty = ""
+    Public Const sysAdlStringConstantsWindowsPathSeparator = "\"
+    Public Const sysAdlStringConstantsNamespacePathSeparator = "."
+    Public Const sysAdlIntegerConstantsZero As Integer = 0
+    Public Const sysAdlIntegerConstantsMaxStringSizeForField As Integer = 255
+    Public Const sysAdlStringConstantsConvertBasePub = "$BASEPUB"
+    Public Const sysAdlStringConstantsConvertNamespace = "$NAMESPACE"
+    Public Const sysadlstringconstantsExtensionVisio = ".vsd"
+    Public Const sysadlstringconstantsExtensionSysAdl = ".sysad"
+    Public Const sysadlstringconstantsExtensionSysAdlElement = ".sysae"
+    Public Const sysAdlStringConstantsParenthesisClose = ")"
+    Public Const sysAdlStringConstantsParenthesisOpen = "("
+    Public Const sysAdlStringConstantsBlankSpace = " "
+    Public Const sysAdlStringConstantsComma = ","
+    Public Const sysAdlStringConstantsNamespacePointSequenceNotAllowed = ".."
+    Public Const sysAdlStringConstantsRegExpAllowedPathQualifier = "^[A-Z,a-z,0-9,-]{1,}$"
+        
+    Public Const sysAdlQuickElementConfigShowIdInLabel As Integer = 1
+    Public Const sysAdlQuickElementConfigShowNameInLabel As Integer = 2
+    
+    Public Const sysAdlTagOpen = "<"
+    Public Const sysAdlTagClose = ">"
+    Public Const sysAdlTagEnd = "/>"
+    Public Const sysAdlTagEnding = "</"
+    
+    Public Const sysAdlTagSectionDiagram = "sysadldiagram"
+    
+    Public Const sysAdlTagSectionObjectives = "objectives"
+    Public Const sysAdlTagSectionObjective = "objective"
+    
+    Public Const sysAdlTagSectionStructures = "structures"
+    Public Const sysAdlTagSectionProtocols = "protocols"
+    Public Const sysAdlTagSectionProtocol = "protocol"
+    Public Const sysAdlTagSectionInterfaces = "interfaces"
+    Public Const sysAdlTagSectionInterface = "interface"
+    Public Const sysAdlTagSectionHosts = "hosts"
+    Public Const sysAdlTagSectionHost = "host"
+    Public Const sysAdlTagSectionPorts = "ports"
+    Public Const sysAdlTagSectionPort = "port"
+    Public Const sysAdlTagSectionDeposits = "deposits"
+    Public Const sysAdlTagSectionDeposit = "deposit"
+    Public Const sysAdlTagSectionConcerns = "concerns"
+    Public Const sysAdlTagSectionConcern = "concern"
+    Public Const sysAdlTagSectionDefinitions = "definitions"
+    Public Const sysAdlTagSectionDefinition = "definition"
+    Public Const sysAdlTagSectionDevices = "devices"
+    Public Const sysAdlTagSectionDevice = "device"
+    Public Const sysAdlTagSectionRoles = "roles"
+    Public Const sysAdlTagSectionRole = "role"
+    Public Const sysAdlTagSectionRequirements = "requirements"
+    Public Const sysAdlTagSectionRequirement = "requirement"
+    Public Const sysAdlTagSectionTransitions = "transitions"
+    Public Const sysAdlTagSectionTransition = "transition"
+    Public Const sysAdlTagSectionRationales = "rationales"
+    Public Const sysAdlTagSectionRationale = "rationale"
+    Public Const sysAdlTagSectionResponsibilities = "responsibilities"
+    Public Const sysAdlTagSectionResponsibility = "responsibility"
+    
+    Public Const sysAdlTagSectionSysAdlElements = "sysadl-elements"
+    Public Const sysAdlTagSectionSysAdlElement = "sysadl-element"
+    Public Const sysAdlTagSectionElementAttribute = "attribute"
+    Public Const sysAdlTagSectionElementShape = "shape"
+    
+    Public Const sysAdlTagSectionRelations = "relations"
+    Public Const sysAdlTagSectionRelation = "relation"
+    
+    Public Const sysAdlTagSectionCommunications = "communications"
+    Public Const sysAdlTagSectionNets = "nets"
+    Public Const sysAdlTagSectionNet = "net"
+    Public Const sysAdlTagSectionConversations = "conversations"
+    Public Const sysAdlTagSectionConversation = "conversation"
+    Public Const sysAdlTagSectionInstallations = "installations"
+    Public Const sysAdlTagSectionInstallation = "installation"
+    
+    Public Const sysAdlTagSectionElementSystem = "element-system"
+    Public Const sysAdlTagSectionElementReceiver = "element-receiver"
+    Public Const sysAdlTagSectionElementFormat = "element-format"
+    Public Const sysAdlTagSectionElementNode = "element-node"
+    Public Const sysAdlTagSectionElementSender = "element-sender"
+    Public Const sysAdlTagSectionElementStakeholder = "element-stakeholder"
+    Public Const sysAdlTagSectionElementQuality = "element-quality"
+    Public Const sysAdlTagSectionElementChannel = "element-channel"
+    Public Const sysAdlTagSectionElement = "element"
+    Public Const sysAdlTagSectionElementSource = "element-source"
+    Public Const sysAdlTagSectionElementDestiny = "element-destiny"
+    Public Const sysAdlTagSectionElementTransition = "element-transition"
+    Public Const sysAdlTagSectionElementRole = "element-role"
+    Public Const sysAdlTagSectionElementDecision = "element-decision"
+    Public Const sysAdlTagSectionElementAssumption = "element-assumption"
+    
+    Public Const sysAdlTagPropertyQualifier = "qualifier"
+    Public Const sysAdlTagPropertyNamespace = "namespace"
+    Public Const sysAdlTagPropertyId = "id"
+    Public Const sysAdlTagPropertyShapeId = "shapeid"
+    Public Const sysAdlTagPropertyType = "type"
+    Public Const sysAdlTagPropertyNodeId = "node-id"
+    Public Const sysAdlTagPropertyDeviceId = "device-id"
+    Public Const sysAdlTagPropertyPortId = "port-id"
+    Public Const sysAdlTagPropertyUrlInfo = "url-info"
+    Public Const sysAdlTagPropertyStereotype = "stereotype"
+    Public Const sysAdlTagPropertyAttributeName = "name"
+    Public Const sysAdlTagPropertyAttributeValule = "value"
+    
+    Public Const sysAdlFieldTypeDate = "Date"
+    Public Const sysAdlFieldTypeElement = "Element"
+    Public Const sysAdlFieldTypeList = "List"
+    Public Const sysAdlFieldTypeString = "String"
+    Public Const sysAdlFieldTypeTime = "Time"
+    Public Const sysAdlFieldTypeValue = "Value"
+    
+    Public Const sysAdlNoStereotype = "NO_STEREOTYPE"
+    
+    Public Const sysAdlValidateMaxLengthNamespace = 200
+    Public Const sysAdlValidateMinLengthNamespace = 1
+    Public Const sysAdlValidateMaxLengthId = 50
+    Public Const sysAdlValidateMinLengthId = 1
+    
+
