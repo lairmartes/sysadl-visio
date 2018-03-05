@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://www.martialcode.com/sysadl/schemas/Fields" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mcsaf="http://www.martialcode.com/sysadl/schemas/Fields">
+	<xs:element name="fields" type="mcsaf:fields"/>
+	<xs:complexType name="fields">
+		<xs:sequence>
+			<xs:element name="field" type="mcsaf:field" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="FieldType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="String"/>
+			<xs:enumeration value="Date"/>
+			<xs:enumeration value="Element"/>
+			<xs:enumeration value="List"/>
+			<xs:enumeration value="Time"/>
+			<xs:enumeration value="Value"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="regexp" type="xs:string"/>
+	<xs:element name="field" type="mcsaf:field"/>
+	<xs:complexType name="field">
+		<xs:sequence>
+			<xs:element name="type" type="mcsaf:type" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="mcsaf:label" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="mcsaf:description" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="mcsaf:error-message" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="name" use="optional" type="xs:string"/>
+	</xs:complexType>
+	<xs:element name="type" type="mcsaf:type"/>
+	<xs:complexType name="type">
+		<xs:sequence>
+			<xs:element ref="mcsaf:item" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="mcsaf:regexp" minOccurs="0" maxOccurs="1"/>
+			<xs:element ref="mcsaf:maximum" minOccurs="0" maxOccurs="1"/>
+			<xs:element ref="mcsaf:minimum" minOccurs="0" maxOccurs="1"/>
+			<xs:element ref="mcsaf:only-integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element ref="mcsaf:element-type" minOccurs="0" maxOccurs="1"/>
+			<xs:element ref="mcsaf:date-allow-past" minOccurs="0" maxOccurs="1"/>
+			<xs:element ref="mcsaf:date-allow-future" minOccurs="0" maxOccurs="1"/>
+			<xs:element ref="mcsaf:date-allow-present" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="value" use="optional" type="mcsaf:FieldType"/>
+	</xs:complexType>
+	<xs:element name="label" type="xs:string"/>
+	<xs:simpleType name="SysADLType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Channel"/>
+			<xs:enumeration value="Decision"/>
+			<xs:enumeration value="Format"/>
+			<xs:enumeration value="Layer"/>
+			<xs:enumeration value="Node"/>
+			<xs:enumeration value="Objective"/>
+			<xs:enumeration value="Quality"/>
+			<xs:enumeration value="Receiver"/>
+			<xs:enumeration value="Role"/>
+			<xs:enumeration value="Sender"/>
+			<xs:enumeration value="Stakeholder"/>
+			<xs:enumeration value="System"/>
+			<xs:enumeration value="Transition"/>
+			<xs:enumeration value="Assumption"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="item" type="xs:string"/>
+	<xs:element name="maximum" type="xs:string"/>
+	<xs:element name="minimum" type="xs:string"/>
+	<xs:element name="only-integer" type="xs:boolean"/>
+	<xs:element name="date-allow-future" type="xs:boolean"/>
+	<xs:element name="date-allow-past" type="xs:string"/>
+	<xs:element name="description" type="xs:string"/>
+	<xs:element name="date-allow-present" type="xs:string"/>
+	<xs:element name="element-type" type="mcsaf:SysADLType"/>
+	<xs:element name="error-message" type="xs:string"/>
+</xs:schema>

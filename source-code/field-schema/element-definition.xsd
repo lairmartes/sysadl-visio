@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://www.martialcode/sysadl/schemas/ElementDefinition" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mcsaed="http://www.martialcode/sysadl/schemas/ElementDefinition">
+	<xs:element name="definitions" type="mcsaed:definitions"/>
+	<xs:complexType name="definitions">
+		<xs:sequence>
+			<xs:element name="definition" type="mcsaed:definition" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="definition" type="mcsaed:definition"/>
+	<xs:complexType name="definition">
+		<xs:sequence>
+			<xs:element name="field" type="mcsaed:field" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="deprecated" use="optional" type="xs:boolean"/>
+		<xs:attribute name="stereotype" use="optional" type="xs:string"/>
+	</xs:complexType>
+	<xs:element name="field" type="mcsaed:field"/>
+	<xs:complexType name="field">
+		<xs:sequence>
+			<xs:element name="show-design" type="mcsaed:show-design" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="show-comments" type="mcsaed:show-comments" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="mandatory" use="optional" type="xs:boolean"/>
+		<xs:attribute name="name" use="optional" type="xs:string"/>
+		<xs:attribute name="order" use="optional" type="xs:int"/>
+	</xs:complexType>
+	<xs:element name="show-design" type="mcsaed:show-design"/>
+	<xs:complexType name="show-design">
+		<xs:sequence minOccurs="0" maxOccurs="1"/>
+		<xs:attribute name="order" use="optional" type="xs:int"/>
+		<xs:attribute name="parenthesis" use="optional" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:element name="show-comments" type="mcsaed:show-comments"/>
+	<xs:complexType name="show-comments">
+		<xs:sequence minOccurs="0" maxOccurs="1"/>
+		<xs:attribute name="order" use="optional" type="xs:int"/>
+		<xs:attribute name="parenthesis" use="optional" type="xs:boolean"/>
+	</xs:complexType>
+</xs:schema>
